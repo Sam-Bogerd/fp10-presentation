@@ -1,30 +1,53 @@
-indicator,year,region,value,unit,Source ,Fact Check
-Global publication share,2000,EU,25.5,percent,"Align Act Accelerate. Research, Technology and Innovation to boost European Competitiveness, Sept 2024. ",?
-Global publication share,2022,EU,18.1,percent,"Align Act Accelerate. Research, Technology and Innovation to boost European Competitiveness, Sept 2024. ",?
-Top 1% cited publication share,2000,EU,20.7,percent,"Align Act Accelerate. Research, Technology and Innovation to boost European Competitiveness, Sept 2024. ",?
-Top 1% cited publication share,2020,EU,17.8,percent,"Align Act Accelerate. Research, Technology and Innovation to boost European Competitiveness, Sept 2024. ",?
-Top 10% cited publication share,2000,EU,23.4,percent,"Align Act Accelerate. Research, Technology and Innovation to boost European Competitiveness, Sept 2024. ",?
-Top 10% cited publication share,2022,EU,19.2,percent,"Align Act Accelerate. Research, Technology and Innovation to boost European Competitiveness, Sept 2024. ",?
-Top 10% cited publication share,2000,China,2.8,percent,"Align Act Accelerate. Research, Technology and Innovation to boost European Competitiveness, Sept 2024. ",?
-Top 10% cited publication share,2022,China,26.7,percent,"Align Act Accelerate. Research, Technology and Innovation to boost European Competitiveness, Sept 2024. ",?
-AI publication share,2010,EU,37,percent,"Align Act Accelerate. Research, Technology and Innovation to boost European Competitiveness, Sept 2024. ",?
-AI publication share,2010,China,34,percent,"Align Act Accelerate. Research, Technology and Innovation to boost European Competitiveness, Sept 2024. ",?
-AI publication share,2010,US,29,percent,"Align Act Accelerate. Research, Technology and Innovation to boost European Competitiveness, Sept 2024. ",?
-AI publication share,2021,China,42,percent,"Align Act Accelerate. Research, Technology and Innovation to boost European Competitiveness, Sept 2024. ",?
-AI publication share,2021,EU,30,percent,"Align Act Accelerate. Research, Technology and Innovation to boost European Competitiveness, Sept 2024. ",?
-AI publication share,2021,US,28,percent,"Align Act Accelerate. Research, Technology and Innovation to boost European Competitiveness, Sept 2024. ",?
-AI patent share (granted),2022,China,61,percent,"Align Act Accelerate. Research, Technology and Innovation to boost European Competitiveness, Sept 2024. ",?
-AI patent share (granted),2022,US,21,percent,"Align Act Accelerate. Research, Technology and Innovation to boost European Competitiveness, Sept 2024. ",?
-AI patent share (granted),2022,Europe,2,percent,"Align Act Accelerate. Research, Technology and Innovation to boost European Competitiveness, Sept 2024. ",?
-Global patent application share,2000,EU,30,percent,"Align Act Accelerate. Research, Technology and Innovation to boost European Competitiveness, Sept 2024. ",?
-Global patent application share,2021,EU,17.3,percent,"Align Act Accelerate. Research, Technology and Innovation to boost European Competitiveness, Sept 2024. ",?
-RD&I intensity,2022,EU,2.2,percent GDP,"Align Act Accelerate. Research, Technology and Innovation to boost European Competitiveness, Sept 2024. ",?
-RD&I intensity,2022,USA,3.5,percent GDP,"Align Act Accelerate. Research, Technology and Innovation to boost European Competitiveness, Sept 2024. ",?
-RD&I intensity,2022,China,2.4,percent GDP,"Align Act Accelerate. Research, Technology and Innovation to boost European Competitiveness, Sept 2024. ",?
-RD&I intensity,2022,Japan,3.3,percent GDP,"Align Act Accelerate. Research, Technology and Innovation to boost European Competitiveness, Sept 2024. ",?
-RD&I intensity,2022,South Korea,4.9,percent GDP,"Align Act Accelerate. Research, Technology and Innovation to boost European Competitiveness, Sept 2024. ",?
-Business share of RD&I,2022,EU,58,percent,"Align Act Accelerate. Research, Technology and Innovation to boost European Competitiveness, Sept 2024. ",?
-Business share of RD&I,2022,USA,68,percent,"Align Act Accelerate. Research, Technology and Innovation to boost European Competitiveness, Sept 2024. ",?
-Business share of RD&I,2022,China,77,percent,"Align Act Accelerate. Research, Technology and Innovation to boost European Competitiveness, Sept 2024. ",?
-Business share of RD&I,2022,Japan,78,percent,"Align Act Accelerate. Research, Technology and Innovation to boost European Competitiveness, Sept 2024. ",?
-Business share of RD&I,2022,South Korea,76,percent,"Align Act Accelerate. Research, Technology and Innovation to boost European Competitiveness, Sept 2024. ",?
+"indicator","year","region","value","unit","Fact Check","Source "
+"Global publication share",2010,"EU","24.0","percent","No","Science, research and innovation performance of the EU, 2024"
+"Global publication share",2022,"EU","18.0","percent","No","Science, research and innovation performance of the EU, 2024"
+"Global publication share",2010,"China","17.0","percent","No","Science, research and innovation performance of the EU, 2024"
+"Global publication share",2022,"China","27.0","percent","No","Science, research and innovation performance of the EU, 2024"
+"Global publication share",2010,"US","21.0","percent","No","Science, research and innovation performance of the EU, 2024"
+"Global publication share",2022,"US","13.0","percent","No","Science, research and innovation performance of the EU, 2024"
+"Top 1% cited publication share",2000,"EU","20.7","percent","No","Science, research and innovation performance of the EU, 2024"
+"Top 1% cited publication share",2020,"EU","17.8","percent","No","Science, research and innovation performance of the EU, 2024"
+"Top 10% cited publication share",2000,"EU","23.4","percent","No","Science, research and innovation performance of the EU, 2024"
+"Top 10% cited publication share",2022,"EU","19.2","percent","No","Science, research and innovation performance of the EU, 2024"
+"Top 10% cited publication share",2000,"China","2.8","percent","No","Science, research and innovation performance of the EU, 2024"
+"Top 10% cited publication share",2022,"China","26.7","percent","No","Science, research and innovation performance of the EU, 2024"
+"AI publication share",2010,"EU","37.0","percent","No","Science, research and innovation performance of the EU, 2024"
+"AI publication share",2010,"China","34.0","percent","No","Science, research and innovation performance of the EU, 2024"
+"AI publication share",2010,"US","29.0","percent","No","Science, research and innovation performance of the EU, 2024"
+"AI publication share",2021,"EU","30.0","percent","No","Science, research and innovation performance of the EU, 2024"
+"AI publication share",2021,"China","42.0","percent","No","Science, research and innovation performance of the EU, 2024"
+"AI publication share",2021,"US","28.0","percent","No","Science, research and innovation performance of the EU, 2024"
+"AI patent share (granted)",2022,"EU","2.0","percent","No","Science, research and innovation performance of the EU, 2024"
+"AI patent share (granted)",2022,"China","61.0","percent","No","Science, research and innovation performance of the EU, 2024"
+"AI patent share (granted)",2022,"US","21.0","percent","No","Science, research and innovation performance of the EU, 2024"
+"Global patent application share",2000,"EU","30.0","percent","No","Science, research and innovation performance of the EU, 2024"
+"Global patent application share",2021,"EU","17.3","percent","No","Science, research and innovation performance of the EU, 2024"
+"R&D Spending",2022,"EU","2.2","percent GDP","No","Science, research and innovation performance of the EU, 2024"
+"R&D Spending",2022,"US","3.5","percent GDP","No","Science, research and innovation performance of the EU, 2024"
+"R&D Spending",2022,"China","2.4","percent GDP","No","Science, research and innovation performance of the EU, 2024"
+"R&D Spending",2022,"Japan","3.3","percent GDP","No","Science, research and innovation performance of the EU, 2024"
+"R&D Spending",2022,"South Korea","4.9","percent GDP","No","Science, research and innovation performance of the EU, 2024"
+"R&D Spending",2000,"EU","1.8","percent GDP","No","Science, research and innovation performance of the EU, 2024"
+"R&D Spending",2000,"US","2.6","percent GDP","No","Science, research and innovation performance of the EU, 2024"
+"R&D Spending",2000,"China","0.9","percent GDP","No","Science, research and innovation performance of the EU, 2024"
+"R&D Spending",2000,"Japan","2.9","percent GDP","No","Science, research and innovation performance of the EU, 2024"
+"R&D Spending",2000,"South Korea","2.1","percent GDP","No","Science, research and innovation performance of the EU, 2024"
+"Business share of R&D",2022,"EU","58.0","percent","No","Science, research and innovation performance of the EU, 2024"
+"Business share of R&D",2022,"US","68.0","percent","No","Science, research and innovation performance of the EU, 2024"
+"Business share of R&D",2022,"China","77.0","percent","No","Science, research and innovation performance of the EU, 2024"
+"Business share of R&D",2022,"Japan","78.0","percent","No","Science, research and innovation performance of the EU, 2024"
+"Business share of R&D",2022,"South Korea","76.0","percent","No","Science, research and innovation performance of the EU, 2024"
+"World share of scientific publications",2022,"EU","18.3","percent","No","Science, research and innovation performance of the EU, 2024"
+"World share of scientific publications",2022,"China","21.8","percent","No","Science, research and innovation performance of the EU, 2024"
+"World share of scientific publications",2022,"US","14.2","percent","No","Science, research and innovation performance of the EU, 2024"
+"Unicorn companies",2023,"EU","89.0","count","No","Science, research and innovation performance of the EU, 2024"
+"Unicorn companies",2023,"US","724.0","count","No","Science, research and innovation performance of the EU, 2024"
+"Unicorn companies",2023,"China","287.0","count","No","Science, research and innovation performance of the EU, 2024"
+"ICT hardware R&D share",2022,"EU","14.0","percent","No","Science, research and innovation performance of the EU, 2024"
+"ICT hardware R&D share",2022,"US","23.0","percent","No","Science, research and innovation performance of the EU, 2024"
+"ICT services R&D share",2022,"EU","8.0","percent","No","Science, research and innovation performance of the EU, 2024"
+"ICT services R&D share",2022,"US","34.0","percent","No","Science, research and innovation performance of the EU, 2024"
+"Automotive R&D share",2022,"EU","33.0","percent","No","Science, research and innovation performance of the EU, 2024"
+"Automotive R&D share",2022,"US","6.0","percent","No","Science, research and innovation performance of the EU, 2024"
+"Health R&D share",2022,"EU","20.0","percent","No","Science, research and innovation performance of the EU, 2024"
+"Health R&D share",2022,"US","26.0","percent","No","Science, research and innovation performance of the EU, 2024"

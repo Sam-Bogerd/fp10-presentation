@@ -89,7 +89,7 @@ def color_for_region(region, fallback_idx=0):
 
 
 def style_axes(ax):
-    ax.set_facecolor("white")
+    ax.set_facecolor("none")
     ax.grid(axis="y", color="#e8e8ec", linestyle="-", linewidth=0.8, alpha=0.8)
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
@@ -228,6 +228,8 @@ def main():
             fig, ax = plot_single_year_multiregion(g, unit, title_font)
         else:
             fig, ax = plot_grouped_bars(g, unit, title_font)
+        fig.patch.set_alpha(0.0)
+        ax.patch.set_alpha(0.0)
 
         source = g["Source"].dropna().astype(str).str.strip().iloc[0] if "Source" in g.columns and not g["Source"].dropna().empty else ""
         if source:
@@ -244,7 +246,7 @@ def main():
 
         plt.tight_layout()
         out_path = out_dir / f"{sanitize_filename(indicator)}.png"
-        fig.savefig(out_path, dpi=220, facecolor="white")
+        fig.savefig(out_path, dpi=220, transparent=True)
         plt.close(fig)
         print(f"Saved: {out_path}")
 
