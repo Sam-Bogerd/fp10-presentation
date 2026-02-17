@@ -18,3 +18,13 @@ _archive/
 
 # Lock files
 .~lock.*
+
+# Fonts
+fonts/
+*.ttf
+*.otf
+*.woff
+*.woff2
+
+# Data
+data/

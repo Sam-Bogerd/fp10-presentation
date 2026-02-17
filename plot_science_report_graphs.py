@@ -46,8 +46,14 @@ SOURCE_SIZE = 10
 
 
 def pick_fonts():
-    local_font_dir = Path("fonts")
-    if local_font_dir.exists():
+    local_font_dirs = [
+        Path("fonts/plus-jakarta-sans"),
+        Path("fonts/playfair-display"),
+        Path("fonts"),
+    ]
+    for local_font_dir in local_font_dirs:
+        if not local_font_dir.exists():
+            continue
         for pattern in ("*.ttf", "*.otf"):
             for font_file in local_font_dir.rglob(pattern):
                 try:
