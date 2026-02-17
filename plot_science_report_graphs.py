@@ -37,11 +37,40 @@ REGION_COLORS = {
 
 FALLBACK_COLORS = [COLORS["teal"], COLORS["pink"], COLORS["green"], COLORS["grey"]]
 
+TITLE_SIZE = 24
+AXIS_LABEL_SIZE = 14
+TICK_LABEL_SIZE = 12
+VALUE_LABEL_SIZE = 11
+LEGEND_SIZE = 11
+SOURCE_SIZE = 10
+
 
 def pick_fonts():
-    names = {f.name for f in fm.fontManager.ttflist}
-    body = "Plus Jakarta Sans" if "Plus Jakarta Sans" in names else "DejaVu Sans"
-    title = "Playfair Display" if "Playfair Display" in names else body
+    local_font_dir = Path("fonts")
+    if local_font_dir.exists():
+        for pattern in ("*.ttf", "*.otf"):
+            for font_file in local_font_dir.rglob(pattern):
+                try:
+                    fm.fontManager.addfont(str(font_file))
+                except Exception:
+                    pass
+
+    names = sorted({f.name for f in fm.fontManager.ttflist})
+    lower_map = {n.lower(): n for n in names}
+
+    def match_font(candidates, fallback):
+        for c in candidates:
+            if c.lower() in lower_map:
+                return lower_map[c.lower()]
+        for c in candidates:
+            c_low = c.lower()
+            for n in names:
+                if c_low in n.lower():
+                    return n
+        return fallback
+
+    body = match_font(["Plus Jakarta Sans", "PlusJakartaSans"], "DejaVu Sans")
+    title = match_font(["Playfair Display", "PlayfairDisplay"], body)
     return body, title
 
 
@@ -88,14 +117,15 @@ def color_for_region(region, fallback_idx=0):
     return FALLBACK_COLORS[fallback_idx % len(FALLBACK_COLORS)]
 
 
-def style_axes(ax):
+def style_axes(ax, grid_axis="y"):
     ax.set_facecolor("none")
-    ax.grid(axis="y", color="#e8e8ec", linestyle="-", linewidth=0.8, alpha=0.8)
+    ax.set_axisbelow(True)
+    ax.grid(axis=grid_axis, color="#e8e8ec", linestyle="-", linewidth=0.8, alpha=0.8, zorder=0)
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
     ax.spines["left"].set_color(COLORS["black"])
     ax.spines["bottom"].set_color(COLORS["black"])
-    ax.tick_params(colors="#475569", labelsize=10)
+    ax.tick_params(colors="#475569", labelsize=TICK_LABEL_SIZE)
 
 
 def plot_single_region_timeseries(g, unit, title_font):
@@ -119,17 +149,17 @@ def plot_single_region_timeseries(g, unit, title_font):
             row["year"],
             row["value"],
             value_label(row["value"], unit),
-            fontsize=9,
+            fontsize=VALUE_LABEL_SIZE,
             color=COLORS["black"],
             ha="center",
             va="bottom",
         )
 
-    ax.set_title(g["indicator"].iloc[0], fontsize=20, color=COLORS["black"], fontname=title_font, pad=14)
-    ax.set_xlabel("Year", fontsize=11, color=COLORS["black"])
-    ax.set_ylabel(unit_axis_label(unit), fontsize=11, color=COLORS["black"])
+    ax.set_title(g["indicator"].iloc[0], fontsize=TITLE_SIZE, color=COLORS["black"], fontname=title_font, pad=14)
+    ax.set_xlabel("Year", fontsize=AXIS_LABEL_SIZE, color=COLORS["black"])
+    ax.set_ylabel(unit_axis_label(unit), fontsize=AXIS_LABEL_SIZE, color=COLORS["black"])
     ax.set_xticks(sorted(g["year"].unique()))
-    style_axes(ax)
+    style_axes(ax, grid_axis="y")
     return fig, ax
 
 
@@ -146,13 +176,13 @@ def plot_single_year_multiregion(g, unit, title_font):
             b.get_y() + b.get_height() / 2,
             value_label(row["value"], unit),
             va="center",
-            fontsize=9,
+            fontsize=VALUE_LABEL_SIZE,
             color=COLORS["black"],
         )
 
-    ax.set_title(f'{g["indicator"].iloc[0]} ({int(g["year"].iloc[0])})', fontsize=20, color=COLORS["black"], fontname=title_font, pad=14)
-    ax.set_xlabel(unit_axis_label(unit), fontsize=11, color=COLORS["black"])
-    style_axes(ax)
+    ax.set_title(f'{g["indicator"].iloc[0]} ({int(g["year"].iloc[0])})', fontsize=TITLE_SIZE, color=COLORS["black"], fontname=title_font, pad=14)
+    ax.set_xlabel(unit_axis_label(unit), fontsize=AXIS_LABEL_SIZE, color=COLORS["black"])
+    style_axes(ax, grid_axis="x")
     return fig, ax
 
 
@@ -183,7 +213,7 @@ def plot_grouped_bars(g, unit, title_font):
                 b.get_x() + b.get_width() / 2,
                 b.get_height(),
                 value_label(float(val), unit),
-                fontsize=8.5,
+                fontsize=VALUE_LABEL_SIZE,
                 ha="center",
                 va="bottom",
                 color=COLORS["black"],
@@ -191,11 +221,11 @@ def plot_grouped_bars(g, unit, title_font):
 
     ax.set_xticks(x)
     ax.set_xticklabels([str(y) for y in years])
-    ax.set_title(g["indicator"].iloc[0], fontsize=20, color=COLORS["black"], fontname=title_font, pad=14)
-    ax.set_xlabel("Year", fontsize=11, color=COLORS["black"])
-    ax.set_ylabel(unit_axis_label(unit), fontsize=11, color=COLORS["black"])
-    ax.legend(frameon=True, facecolor="white", edgecolor="#e2e0e8", fontsize=9, loc="upper right")
-    style_axes(ax)
+    ax.set_title(g["indicator"].iloc[0], fontsize=TITLE_SIZE, color=COLORS["black"], fontname=title_font, pad=14)
+    ax.set_xlabel("Year", fontsize=AXIS_LABEL_SIZE, color=COLORS["black"])
+    ax.set_ylabel(unit_axis_label(unit), fontsize=AXIS_LABEL_SIZE, color=COLORS["black"])
+    ax.legend(frameon=True, facecolor="white", edgecolor="#e2e0e8", fontsize=LEGEND_SIZE, loc="upper right")
+    style_axes(ax, grid_axis="y")
     return fig, ax
 
 
@@ -205,7 +235,15 @@ def main():
     out_dir.mkdir(parents=True, exist_ok=True)
 
     body_font, title_font = pick_fonts()
-    plt.rcParams.update({"font.family": body_font, "font.size": 11})
+    plt.rcParams.update(
+        {
+            "font.family": body_font,
+            "font.size": TICK_LABEL_SIZE,
+            "axes.titlesize": TITLE_SIZE,
+            "axes.labelsize": AXIS_LABEL_SIZE,
+            "legend.fontsize": LEGEND_SIZE,
+        }
+    )
 
     df = pd.read_csv(csv_path)
     df.columns = [c.strip() for c in df.columns]
@@ -238,7 +276,7 @@ def main():
                 -0.18,
                 f"Source: {source}",
                 transform=ax.transAxes,
-                fontsize=8,
+                fontsize=SOURCE_SIZE,
                 color="#475569",
                 ha="left",
                 va="top",
