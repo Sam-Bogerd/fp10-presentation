@@ -1,0 +1,1729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Can Europe Become a Science Superpower? - CFG</title>
+    <link rel="icon" type="image/png" href="images/cfg-icon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --blue: #8098FF;
+            --blue-dark: #4a6ed4;
+            --red: #F47D5B;
+            --red-dark: #c45a3d;
+            --green: #B4DBA2;
+            --green-dark: #7cb668;
+            --green-darker: #5a9a4a;
+            --purple: #A09AC8;
+            --purple-dark: #7a72a8;
+            --yellow: #FEDF9E;
+            --yellow-dark: #d4b870;
+            --grey: #F6F5F9;
+            --black: #0E0705;
+            --teal: #A2E1FF;
+            --teal-dark: #6bc4e8;
+            --pink: #FFB6BB;
+        }
+
+        .reveal {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--grey);
+        }
+
+        .reveal .slides section {
+            background: var(--grey);
+            font-size: 0.9em;
+        }
+
+        .reveal h1, .reveal h2, .reveal h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            text-transform: none;
+            font-weight: 700;
+            color: var(--black);
+            text-align: left;
+        }
+
+        .reveal h1 {
+            font-size: 1.9em;
+        }
+
+        .reveal h2 {
+            font-size: 1.5em;
+            margin-bottom: 0.4em;
+        }
+
+        .reveal h3 {
+            font-size: 0.9em;
+        }
+
+        .reveal .mermaid {
+            font-size: 0.7em;
+        }
+
+        .reveal .mermaid svg {
+            max-height: 70vh;
+            overflow: visible !important;
+        }
+
+        .reveal .mermaid svg * {
+            overflow: visible !important;
+        }
+
+        .reveal p {
+            margin: 0 0 0.4em 0;
+            line-height: 1.4;
+            text-align: left;
+        }
+
+        .reveal ul {
+            text-align: left;
+            margin: 0;
+        }
+
+        .reveal li {
+            margin-bottom: 0.25em;
+            line-height: 1.35;
+            font-size: 0.95em;
+        }
+
+        .reveal section {
+            padding: 10px 0 10px 40px;
+            text-align: left;
+        }
+
+        /* Slide header bar */
+        .slide-header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 0 40px;
+            font-size: 0.55em;
+            z-index: 100;
+        }
+
+        .slide-header .header-left {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            min-width: 280px;
+        }
+
+        .slide-header .header-line-short {
+            width: 100%;
+            height: 2.5px;
+            background: var(--black);
+        }
+
+        .slide-header .header-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            flex: 1;
+            margin-left: 60px;
+        }
+
+        .slide-header .header-line-long {
+            width: 100%;
+            height: 2.5px;
+            background: var(--black);
+        }
+
+        .slide-header .header-brand {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--black);
+            padding-top: 6px;
+            white-space: nowrap;
+        }
+
+        .slide-header .header-brand strong {
+            font-weight: 700;
+        }
+
+        .slide-header .header-brand em {
+            font-style: italic;
+            font-weight: 400;
+            color: #475569;
+        }
+
+        .slide-header .header-number {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--black);
+            font-weight: 700;
+            font-size: 0.75em;
+            padding-top: 9px;
+        }
+
+        /* Ensure slide content doesn't overlap header */
+        .reveal section {
+            padding-top: 60px;
+        }
+
+        /* Center title and section-divider slides */
+        .reveal section.center-slide {
+            text-align: center;
+        }
+
+        .reveal section.center-slide h1,
+        .reveal section.center-slide h2,
+        .reveal section.center-slide p {
+            text-align: center;
+        }
+
+        .reveal section.center-slide.present {
+            display: flex !important;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        /* Prevent non-active center-slides from affecting layout flow */
+        .reveal section.center-slide.past,
+        .reveal section.center-slide.future {
+            position: absolute !important;
+        }
+
+        .small-text {
+            font-size: 0.55em;
+            color: #475569;
+        }
+
+        .subtitle {
+            font-size: 0.85em;
+            color: #475569;
+            margin-top: 0.2em;
+        }
+
+        .org-name {
+            font-size: 0.75em;
+            color: var(--black);
+            font-weight: 600;
+            letter-spacing: 0.1em;
+        }
+
+        .highlight-box {
+            background: var(--grey);
+            border-left: 4px solid var(--yellow);
+            padding: 0.6em 0.8em;
+            margin: 0.5em 0;
+            text-align: left;
+        }
+
+        .scenario-badge {
+            display: inline-block;
+            padding: 0.15em 0.5em;
+            border-radius: 14px;
+            font-size: 0.7em;
+            margin: 0.1em;
+            color: var(--black);
+        }
+
+        .badge-plateau { background: var(--green); }
+        .badge-bigai { background: var(--red); }
+        .badge-diplomacy { background: var(--blue); }
+        .badge-armsrace { background: var(--purple); }
+        .badge-takeoff { background: var(--yellow); }
+
+        .scenario-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 3px;
+            width: 550px;
+            height: 350px;
+            margin: 0.6em auto;
+            position: relative;
+        }
+
+        .scenario-cell {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0.6em;
+            font-size: 0.7em;
+        }
+
+        .cell-topleft { background: var(--yellow); }
+        .cell-topright { background: var(--blue); }
+        .cell-bottomleft { background: var(--green); }
+        .cell-bottomright { background: var(--red); }
+        .cell-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--purple);
+            padding: 0.5em 1em;
+            border-radius: 4px;
+            z-index: 10;
+        }
+
+        .scenario-label {
+            font-weight: 600;
+            margin-top: 0.3em;
+        }
+
+        .axis-label {
+            position: absolute;
+            font-size: 0.65em;
+            color: #475569;
+        }
+
+        .axis-y {
+            left: -120px;
+            top: 50%;
+            transform: rotate(-90deg) translateX(-50%);
+            white-space: nowrap;
+        }
+
+        .axis-x {
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+        }
+
+        .corner-label {
+            font-size: 0.65em;
+            color: #666;
+        }
+
+        .team-grid {
+            display: flex;
+            justify-content: flex-start;
+            gap: 1.8em;
+            margin-top: 1.2em;
+        }
+
+        .team-member {
+            text-align: center;
+            font-size: 0.65em;
+        }
+
+        .team-member img {
+            width: 220px;
+            height: 260px;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 4px;
+            margin-bottom: 0.5em;
+            display: block;
+            background: #f5f5f5;
+        }
+
+        .journey-grid {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 0.7em;
+            margin-top: 2.5em;
+        }
+
+        .journey-card {
+            background: white;
+            padding: 0.8em 0.7em;
+            border-radius: 10px;
+            flex: 1;
+            max-width: 230px;
+            text-align: left;
+            border: 1.5px solid #e2e0e8;
+            border-top: 3.5px solid var(--blue);
+            position: relative;
+        }
+
+        .journey-card:nth-child(2) { border-top-color: var(--green-dark); }
+        .journey-card:nth-child(3) { border-top-color: var(--red); }
+        .journey-card:nth-child(4) { border-top-color: var(--purple); }
+        .journey-card:nth-child(5) { border-top-color: var(--teal-dark); }
+
+        .journey-card .step-number {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.38em;
+            font-weight: 700;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.4em;
+        }
+
+        .journey-card h3 {
+            font-size: 0.55em;
+            margin-bottom: 0.25em;
+            text-align: left;
+        }
+
+        .journey-card p {
+            font-size: 0.42em;
+            color: #475569;
+            line-height: 1.45;
+            margin: 0;
+        }
+
+        /* Text + image scenario layout */
+        .scenario-layout {
+            display: flex;
+            gap: 2em;
+            align-items: flex-start;
+            text-align: left;
+            max-width: 1150px;
+            margin: 0px;
+        }
+
+        .scenario-layout .text-col {
+            flex: 1.1;
+            font-size: 0.55em;
+        }
+
+        .scenario-layout .text-col p {
+            margin-bottom: 0.3em;
+            line-height: 1.3;
+        }
+
+        .scenario-layout .text-col ul {
+            margin: 0;
+            padding-left: 1em;
+        }
+
+        .scenario-layout .text-col li {
+            margin-bottom: 0.5em;
+            line-height: 1.3;
+        }
+
+        .scenario-layout .image-col {
+            flex: 1;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-end;
+        }
+
+        .scenario-layout .image-col img {
+            max-width: 100%;
+            height: 420px;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+
+        .two-column {
+            display: flex;
+            gap: 1.2em;
+            align-items: flex-start;
+            text-align: left;
+            max-width: 1150px;
+            margin: 0px;
+            margin-top: 10px;
+        }
+
+        .two-column .col {
+            flex: 1;
+            max-width: 50%;
+        }
+
+        .two-column .col-narrow {
+            flex: 0.8;
+        }
+
+        .two-column ul {
+            margin: 0;
+            padding-left: 1em;
+            font-size: 0.7em;
+        }
+
+        .two-column li {
+            margin-bottom: 0.15em;
+            line-height: 1.25;
+        }
+
+        .two-column p {
+            font-size: 0.55em;
+            margin-bottom: 0.4em;
+            line-height: 1.3;
+        }
+
+        .scenario-question {
+            font-style: italic;
+            font-size: 0.7em;
+            font-weight: 600;
+            margin-bottom: 0.4em;
+            color: var(--black);
+        }
+
+        .timeline-label {
+            font-weight: 600;
+            color: var(--black);
+            font-size: 0.65em;
+        }
+
+        .endings-box {
+            background: var(--grey);
+            padding: 0.4em 0.6em;
+            border-radius: 6px;
+            margin-top: 0.2em;
+            font-size: 0.6em;
+            line-height: 1.25;
+        }
+
+        .endings-box p {
+            margin-bottom: 0.25em;
+        }
+
+        .endings-box strong {
+            color: var(--black);
+        }
+
+        .section-title {
+            color: var(--black);
+        }
+
+        /* Section break with background image */
+        .reveal section.section-break {
+            background: transparent !important;
+            position: relative;
+        }
+
+        .section-break .section-title {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Cover slide with full-bleed background */
+        .reveal section.cover-slide {
+            padding: 0 !important;
+            height: 100%;
+            background: transparent !important;
+        }
+
+        .cover-slide .slide-header .header-line-short,
+        .cover-slide .slide-header .header-line-long {
+            background: rgba(255, 255, 255, 0.7);
+        }
+
+        .cover-slide .slide-header .header-brand,
+        .cover-slide .slide-header .header-brand em,
+        .cover-slide .slide-header .header-number {
+            color: white;
+        }
+
+        .cover-slide .cover-content {
+            position: absolute;
+            top: 50px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 40px;
+            padding-bottom: 120px;
+            z-index: 1;
+        }
+
+        .cover-slide .cover-content h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: white;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-align: left;
+            line-height: 1.08;
+            margin: 0;
+            text-shadow: 0 2px 16px rgba(0,0,0,0.35);
+            max-width: 60%;
+        }
+
+        .cover-slide .cover-logo {
+            position: absolute;
+            bottom: 30px;
+            left: 40px;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .cover-slide .cover-logo .logo-text {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: white;
+            font-size: 0.55em;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .key-insight {
+            background: var(--grey);
+            border-left: 3px solid var(--purple);
+            padding: 0.4em 0.6em;
+            margin-top: 0.4em;
+            text-align: left;
+            font-size: 0.6em;
+            line-height: 1.3;
+        }
+
+        .diagram-compact .mermaid svg {
+            max-height: 52vh;
+            transform: scale(0.85);
+        }
+
+        .futures-summary {
+            display: flex;
+            justify-content: center;
+            gap: 0.8em;
+            flex-wrap: wrap;
+            margin: 0.5em 0;
+        }
+
+        .future-card {
+            width: 130px;
+            padding: 0.7em;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .future-card h4 {
+            font-size: 0.8em;
+            margin-bottom: 0.2em;
+        }
+
+        .future-card p {
+            font-size: 0.65em;
+            color: #475569;
+        }
+
+        /* Scenario Chart Grid Styles */
+        .chart-container {
+            max-width: 500px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .chart-wrapper {
+            display: flex;
+            align-items: stretch;
+        }
+
+        .y-axis {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-right: 15px;
+        }
+
+        .y-axis-label {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            font-size: 0.9rem;
+            color: var(--black);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .y-axis-arrow {
+            transform: rotate(90deg);
+            font-size: 1.2rem;
+        }
+
+        .chart-main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chart-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            width: 100%;
+            aspect-ratio: 1;
+            position: relative;
+        }
+
+        .quadrant {
+            position: relative;
+        }
+
+        .quadrant-label {
+            position: absolute;
+            font-size: 0.85rem;
+            color: var(--black);
+            white-space: nowrap;
+        }
+
+        .scenario {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .scenario-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--black);
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            background: var(--black);
+            border-radius: 50%;
+        }
+
+        .quadrant.take-off {
+            background: var(--yellow);
+            border-radius: 4px 0 0 0;
+        }
+
+        .take-off .quadrant-label {
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .take-off .scenario {
+            top: 22%;
+            left: 38%;
+            transform: translate(-50%, -50%);
+        }
+
+        .quadrant.arms-race {
+            background: var(--blue);
+            border-radius: 0 4px 0 0;
+        }
+
+        .arms-race .quadrant-label {
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .arms-race .scenario {
+            top: 45%;
+            left: 65%;
+            transform: translate(-50%, -50%);
+        }
+
+        .quadrant.plateau {
+            background: var(--green);
+            border-radius: 0 0 0 4px;
+        }
+
+        .plateau .quadrant-label {
+            bottom: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .plateau .scenario {
+            top: 70%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+        }
+
+        .quadrant.big-ai {
+            background: var(--red);
+            border-radius: 0 0 4px 0;
+        }
+
+        .big-ai .quadrant-label {
+            bottom: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .big-ai .scenario {
+            top: 38%;
+            left: 68%;
+            transform: translate(-50%, -50%);
+        }
+
+        .diplomacy-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -20%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            z-index: 10;
+        }
+
+        .diplomacy-center .scenario-title {
+            font-size: 1.3rem;
+        }
+
+        .diplomacy-center .dot {
+            width: 10px;
+            height: 10px;
+        }
+
+        .x-axis {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 15px;
+            gap: 8px;
+        }
+
+        .x-axis-label {
+            font-size: 0.9rem;
+            color: var(--black);
+        }
+
+        .x-axis-arrow {
+            font-size: 1.2rem;
+        }
+
+        .metr-chart-container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- SLIDE 1: Title -->
+            <section class="cover-slide" data-background-image="images/cover-background.png" data-background-size="cover" data-background-position="center">
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="header-line-short"></div>
+                        <div class="header-brand"><strong>c.f.g</strong> <em>· Making Europe's Funding Go Further</em></div>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-line-long"></div>
+                        <div class="header-number"></div>
+                    </div>
+                </div>
+                <div class="cover-content">
+                    <h1>How Can Europe Become a Science Superpower?</h1>
+                </div>
+                <div class="cover-logo">
+                    <div class="logo-text">centre<br>for future<br>generations</div>
+                </div>
+            </section>
+
+            <!-- SLIDE 2: Europe Considers itself a Scientific Powerhouse -->
+            <section>
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="header-line-short"></div>
+                        <div class="header-brand"><strong>c.f.g</strong> <em></em></div>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-line-long"></div>
+                        <div class="header-number"></div>
+                    </div>
+                </div>
+                <h2>Europe considers itself a scientific powerhouse</h2>
+                <p style="font-size: 0.7em; color: #475569; margin-bottom: 0.6em;">[Quotes to be added]</p>
+            </section>
+
+            <!-- SLIDE 3: Is this (still) true? -->
+            <section>
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="header-line-short"></div>
+                        <div class="header-brand"><strong>c.f.g</strong> <em></em></div>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-line-long"></div>
+                        <div class="header-number"></div>
+                    </div>
+                </div>
+                <h2>Is this (still) true?</h2>
+                <p style="font-size: 0.7em; color: #475569; margin-bottom: 0.6em;">[Figures from Heitor report to be added]</p>
+            </section>
+
+            <!-- SLIDE 4: The diagnosis is clear -->
+            <section>
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="header-line-short"></div>
+                        <div class="header-brand"><strong>c.f.g</strong> <em></em></div>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-line-long"></div>
+                        <div class="header-number"></div>
+                    </div>
+                </div>
+                <h2>The diagnosis is clear and an EU consensus</h2>
+                <p style="font-size: 0.65em; margin-bottom: 0.3em;"><strong>Three major reports in 2024 reached the same conclusion:</strong></p>
+                <div style="font-size: 0.6em; line-height: 1.4;">
+                    <div class="highlight-box" style="margin-bottom: 0.4em;">
+                        <p><strong>Von der Leyen (Europe's Choice, 2024)</strong></p>
+                        <p style="font-style: italic;">&ldquo;Boost Europe's competitiveness&hellip; by <strong>starting a new age of invention and ingenuity</strong>. This requires <strong>putting research and innovation, science and technology, at the centre of our economy</strong>.&rdquo;</p>
+                    </div>
+                    <div class="highlight-box" style="margin-bottom: 0.4em;">
+                        <p><strong>Draghi Report (September 2024)</strong></p>
+                        <p style="font-style: italic;">&ldquo;<strong>Establish a robust Research and Innovation Union</strong>&hellip; Unlock our innovative potential, promoting <strong>fundamental science and disruptive innovation</strong>, leading to new technologies.&rdquo;</p>
+                        <p>Key recommendation: <strong>Double the ERC budget</strong> and increase R&amp;D expenditure</p>
+                    </div>
+                    <div class="highlight-box" style="margin-bottom: 0.4em;">
+                        <p><strong>Letta Report (Single Market, 2024)</strong></p>
+                        <p style="font-style: italic;">&ldquo;Add a <strong>fifth freedom</strong> to the existing four: the <strong>free movement of research, innovation, knowledge and education</strong> in the Single Market.&rdquo;</p>
+                    </div>
+                    <div class="key-insight">
+                        <strong>The alignment:</strong> All three reports identify R&amp;D reform as <strong>systemic</strong> and <strong>central</strong> to European competitiveness&mdash;not a side issue, but the foundation of Europe's economic future.
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 5: Framework Programmes -->
+            <section>
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="header-line-short"></div>
+                        <div class="header-brand"><strong>c.f.g</strong> <em></em></div>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-line-long"></div>
+                        <div class="header-number"></div>
+                    </div>
+                </div>
+                <h2>Enter Framework Programmes: What are they?</h2>
+                <p style="font-size: 0.6em; color: #475569; margin-bottom: 0.2em;"><em>Timeline: FP1 (1984) &rarr; FP10 (2028)</em></p>
+                <div class="two-column">
+                    <div class="col">
+                        <p><strong>Framework Programmes</strong> are the EU's multi-year research and innovation funding instruments&mdash;Europe's way of coordinating and funding science at continental scale.</p>
+                        <ul>
+                            <li><strong>7-year cycles</strong> aligned with EU budget (Multiannual Financial Framework)</li>
+                            <li><strong>Cross-border collaboration:</strong> Typically requires consortia from multiple member states</li>
+                            <li><strong>Competitive funding:</strong> Open calls, peer review, excellence-based selection</li>
+                            <li><strong>Bottom-up + top-down:</strong> Mix of researcher-led proposals and strategic priorities (Missions)</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <p><strong>Evolution:</strong> Started modest in 1984 (FP1: &euro;3.8B), now reaching &euro;175B (FP10)&mdash;a <strong>46x increase</strong></p>
+                        <div class="key-insight" style="margin-top: 0.6em;">
+                            <strong>Think of it as:</strong> Europe's R&amp;D operating system&mdash;the infrastructure layer that funds everything from blue-sky physics to climate tech startups.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 6: FP10 in Context -->
+            <section>
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="header-line-short"></div>
+                        <div class="header-brand"><strong>c.f.g</strong> <em></em></div>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-line-long"></div>
+                        <div class="header-number"></div>
+                    </div>
+                </div>
+                <h2>FP10 in Context: How It Compares</h2>
+                <div class="two-column">
+                    <div class="col">
+                        <p><strong>European public R&amp;D landscape:</strong></p>
+                        <ul>
+                            <li><strong>Total EU public R&amp;D spend:</strong> ~&euro;100B annually (all member states combined)</li>
+                            <li><strong>FP10:</strong> &euro;175B over 7 years = <strong>&euro;25B/year</strong> (roughly 25% of European public R&amp;D)</li>
+                            <li><strong>National programmes:</strong> Germany (~&euro;40B/yr), France (~&euro;20B/yr), others vary widely</li>
+                            <li><strong>Comparison:</strong> US NSF (~&euro;8B/yr), NIH (~&euro;40B/yr), total US federal R&amp;D (~&euro;140B/yr)</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <p><strong>Why FP matters disproportionately:</strong></p>
+                        <ul>
+                            <li><strong>Sets standards:</strong> National programmes often follow FP structures and priorities</li>
+                            <li><strong>Enables scale:</strong> Cross-border projects impossible at national level (CERN, EuroHPC, clinical trials)</li>
+                            <li><strong>Strategic direction:</strong> Missions and challenges signal where Europe thinks science should go</li>
+                            <li><strong>Talent magnet:</strong> Horizon grants carry prestige, attract top researchers</li>
+                        </ul>
+                        <div class="key-insight" style="margin-top: 0.4em;">
+                            <strong>The catch:</strong> Despite significant funding, Europe's <strong>innovation output lags inputs</strong>&mdash;especially in translating research to commercial success.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 7: Europe's Core Science Bottlenecks -->
+            <section>
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="header-line-short"></div>
+                        <div class="header-brand"><strong>c.f.g</strong> <em></em></div>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-line-long"></div>
+                        <div class="header-number"></div>
+                    </div>
+                </div>
+                <h2>Europe's Core Science Bottlenecks</h2>
+                <p style="font-size: 0.6em; margin-bottom: 0.3em;"><strong>The paradox:</strong> Europe produces excellent science but struggles with breakthrough innovation</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.6em; font-size: 0.55em;">
+                    <div class="highlight-box" style="border-left-color: var(--red);">
+                        <p><strong>1. Risk aversion in funding structures</strong></p>
+                        <ul style="padding-left: 1em; margin: 0;">
+                            <li>Peer review favours safe, incremental projects</li>
+                            <li>Grant success rates ~12% &rarr; applicants optimise for &ldquo;fundability&rdquo; not &ldquo;impact&rdquo;</li>
+                            <li>Multi-year review cycles deter high-risk research</li>
+                        </ul>
+                    </div>
+                    <div class="highlight-box" style="border-left-color: var(--blue);">
+                        <p><strong>2. Valley of Death (lab to market)</strong></p>
+                        <ul style="padding-left: 1em; margin: 0;">
+                            <li>Strong basic research, weak commercialisation</li>
+                            <li>University tech transfer offices often bureaucratic</li>
+                            <li>VC concentrated in few cities (unlike US ecosystem)</li>
+                        </ul>
+                    </div>
+                    <div class="highlight-box" style="border-left-color: var(--green-dark);">
+                        <p><strong>3. Bureaucratic burden</strong></p>
+                        <ul style="padding-left: 1em; margin: 0;">
+                            <li>Horizon applications notoriously complex (100+ page proposals)</li>
+                            <li>Researchers spend more time on paperwork than research</li>
+                            <li>Administrative costs can reach 20&ndash;30% of grant value</li>
+                        </ul>
+                    </div>
+                    <div class="highlight-box" style="border-left-color: var(--purple);">
+                        <p><strong>4. Fragmentation</strong></p>
+                        <ul style="padding-left: 1em; margin: 0;">
+                            <li>27 national systems with different rules, standards, career structures</li>
+                            <li>Limited researcher mobility compared to US</li>
+                            <li>No equivalent of NIH or NSF as unifying institution</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="key-insight" style="margin-top: 0.4em;">
+                    <strong>Draghi Report:</strong> &ldquo;The innovation gap stems from funding structures that discourage risk-taking, not insufficient investment.&rdquo;<br>
+                    <strong>Translation: We can fix this without spending more&mdash;we need to spend smarter.</strong>
+                </div>
+            </section>
+
+            <!-- SLIDE 8: FP10 - Europe's €175 Billion Question -->
+            <section>
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="header-line-short"></div>
+                        <div class="header-brand"><strong>c.f.g</strong> <em></em></div>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-line-long"></div>
+                        <div class="header-number"></div>
+                    </div>
+                </div>
+                <h2>FP10 &mdash; Europe's &euro;175 Billion Question</h2>
+                <p style="font-size: 0.65em; margin-bottom: 0.3em;">FP10 is the EU's <strong>10th Framework Programme for Research and Innovation</strong> (2028&ndash;2034).</p>
+                <div class="two-column">
+                    <div class="col">
+                        <p><strong>The scale:</strong></p>
+                        <ul>
+                            <li>&euro;175B budget (nearly <strong>double</strong> current Horizon Europe's &euro;93B)</li>
+                            <li>&euro;25B/year = Largest coordinated European research programme</li>
+                            <li>Equivalent to <strong>3 years of Germany's total national R&amp;D budget</strong></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <p><strong>The stakes:</strong></p>
+                        <ul>
+                            <li>Decisions made in <strong>next 18 months</strong> lock in European science policy through 2034</li>
+                            <li>Window to address all four bottlenecks identified above</li>
+                            <li><strong>This is the structural reform opportunity</strong>&mdash;or we lock in business-as-usual for another seven years</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 9: Why This Matters Now -->
+            <section>
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="header-line-short"></div>
+                        <div class="header-brand"><strong>c.f.g</strong> <em></em></div>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-line-long"></div>
+                        <div class="header-number"></div>
+                    </div>
+                </div>
+                <h2>Why This Matters Now</h2>
+                <div style="font-size: 0.7em; max-width: 900px;">
+                    <p>FP10 isn't just a bigger budget&mdash;it's a <strong>once-in-a-decade chance to reform how Europe does science</strong>.</p>
+                    <p><strong>Current status:</strong> Commission proposal (July 2025), negotiations through 2027, implementation January 2028</p>
+                    <div class="key-insight" style="margin-top: 0.6em;">
+                        <strong>The Draghi insight:</strong> Europe's innovation gap stems from <strong>funding structures that discourage risk-taking</strong>, not insufficient investment.<br><br>
+                        <strong>Translation:</strong> We can fix this without spending more&mdash;we need to spend smarter.
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 10: The Core Tension -->
+            <section>
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="header-line-short"></div>
+                        <div class="header-brand"><strong>c.f.g</strong> <em></em></div>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-line-long"></div>
+                        <div class="header-number"></div>
+                    </div>
+                </div>
+                <h2>The Core Tension</h2>
+                <p style="font-size: 0.65em; margin-bottom: 0.4em;">Two competing visions for FP10:</p>
+                <div style="display: flex; gap: 1.5em; margin-top: 0.3em; font-size: 0.65em;">
+                    <div style="flex: 1; background: white; padding: 0.8em; border-radius: 8px; border: 1.5px solid #e2e0e8; border-top: 3.5px solid var(--purple);">
+                        <h3 style="margin-bottom: 0.3em;">1. Business as usual</h3>
+                        <p>Larger budget, same structure, incremental improvements</p>
+                    </div>
+                    <div style="flex: 1; background: white; padding: 0.8em; border-radius: 8px; border: 1.5px solid #e2e0e8; border-top: 3.5px solid var(--green-dark);">
+                        <h3 style="margin-bottom: 0.3em;">2. Structural reform</h3>
+                        <p>Transform research culture from risk-averse incrementalism to mission-driven innovation</p>
+                    </div>
+                </div>
+                <div style="font-size: 0.65em; margin-top: 0.6em;">
+                    <p>Multiple presidencies (Lithuania, Greece) explicitly support higher risk tolerance, but <strong>institutional inertia is powerful</strong>.</p>
+                    <div class="key-insight" style="margin-top: 0.4em;">
+                        <strong>The window closes in 2027</strong>&mdash;decisions made in next 18 months lock in European science policy through 2034.
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 11: Section Break - Opportunities -->
+            <section class="center-slide section-break" data-background-image="images/section-break-background.png" data-background-size="cover" data-background-position="center">
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="header-line-short"></div>
+                        <div class="header-brand"><strong>c.f.g</strong> <em></em></div>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-line-long"></div>
+                        <div class="header-number"></div>
+                    </div>
+                </div>
+                <h1 class="section-title">What Are the Opportunities?</h1>
+            </section>
+
+            <!-- SLIDE 12: The Meta-Science Moment -->
+            <section>
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="header-line-short"></div>
+                        <div class="header-brand"><strong>c.f.g</strong> <em></em></div>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-line-long"></div>
+                        <div class="header-number"></div>
+                    </div>
+                </div>
+                <h2>The Meta-Science Moment</h2>
+                <ul style="font-size: 0.7em; padding-left: 1.2em; max-width: 900px; line-height: 1.6;">
+                    <li>Europe spends <strong>&euro;100B+ annually</strong> on public R&amp;D but struggles to turn it into breakthroughs</li>
+                    <li><strong>The problem isn't money&mdash;it's how we allocate it</strong></li>
+                    <li>FP10 (&euro;175B, 2028&ndash;2034) offers a once-in-a-decade chance to reform the system</li>
+                    <li>Key insight: <strong>Small changes in funding mechanisms can have outsized impact</strong> (global spillovers)</li>
+                </ul>
+            </section>
+
+            <!-- SLIDE 13: AI Changes Everything -->
+            <section>
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="header-line-short"></div>
+                        <div class="header-brand"><strong>c.f.g</strong> <em></em></div>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-line-long"></div>
+                        <div class="header-number"></div>
+                    </div>
+                </div>
+                <h2>AI Changes Everything (But We're Missing Half the Opportunity)</h2>
+                <div class="two-column">
+                    <div class="col">
+                        <p><strong>Two ways AI transforms science:</strong></p>
+                        <ul>
+                            <li><strong>Modelling nature:</strong> AlphaFold (Nobel Prize 2024) shows AI can solve problems humans couldn't</li>
+                            <li><strong>Automating discovery:</strong> AI can compress research timelines from years to months</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <p><strong>The gap:</strong> FP10 funds AI research but doesn't use AI to transform how we fund research</p>
+                        <ul>
+                            <li>The US NSF is building AI platforms to screen proposals and reduce bureaucracy</li>
+                            <li>Europe risks falling behind not just in AI science, but in AI-native institutions</li>
+                        </ul>
+                        <div class="key-insight" style="margin-top: 0.4em;">
+                            <strong>Opportunity:</strong> Build the world's first AI-powered research funding system.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 14: What Works Elsewhere -->
+            <section>
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="header-line-short"></div>
+                        <div class="header-brand"><strong>c.f.g</strong> <em></em></div>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-line-long"></div>
+                        <div class="header-number"></div>
+                    </div>
+                </div>
+                <h2>What Works Elsewhere (That Europe Isn't Doing)</h2>
+                <p style="font-size: 0.65em; margin-bottom: 0.3em;"><strong>Three proven innovations ready to import:</strong></p>
+                <div style="display: flex; gap: 0.8em; font-size: 0.6em;">
+                    <div class="highlight-box" style="flex: 1; border-left-color: var(--blue);">
+                        <p><strong>1. Funding lotteries</strong></p>
+                        <p><em>New Zealand, Switzerland</em></p>
+                        <p>For equally-good proposals, flip a coin instead of endless committee debates</p>
+                    </div>
+                    <div class="highlight-box" style="flex: 1; border-left-color: var(--green-dark);">
+                        <p><strong>2. Distributed peer review</strong></p>
+                        <p><em>UK</em></p>
+                        <p>Let applicants review each other&mdash;<strong>53% faster decisions</strong>, less burden on reviewers</p>
+                    </div>
+                    <div class="highlight-box" style="flex: 1; border-left-color: var(--red);">
+                        <p><strong>3. ARPA-style agencies</strong></p>
+                        <p><em>UK's ARIA, Germany's SPRIND</em></p>
+                        <p>Give programme managers real autonomy and accept high failure rates</p>
+                    </div>
+                </div>
+                <div class="key-insight" style="margin-top: 0.5em;">
+                    <strong>The pattern:</strong> All these reforms increase speed, reduce bureaucracy, and embrace risk. None require massive new budgets.
+                </div>
+            </section>
+
+            <!-- SLIDE 15: Section Break - What Can We Do Now? -->
+            <section class="center-slide section-break" data-background-image="images/section-break-background.png" data-background-size="cover" data-background-position="center">
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="header-line-short"></div>
+                        <div class="header-brand"><strong>c.f.g</strong> <em></em></div>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-line-long"></div>
+                        <div class="header-number"></div>
+                    </div>
+                </div>
+                <h1 class="section-title">What Can We Do Now?</h1>
+            </section>
+
+            <!-- SLIDE 16: Three Concrete Reforms for FP10 -->
+            <section>
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="header-line-short"></div>
+                        <div class="header-brand"><strong>c.f.g</strong> <em></em></div>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-line-long"></div>
+                        <div class="header-number"></div>
+                    </div>
+                </div>
+                <h2>Three Concrete Reforms for FP10</h2>
+                <div style="display: flex; gap: 0.8em; font-size: 0.55em; margin-top: 0.3em;">
+                    <div style="flex: 1; background: white; padding: 0.8em; border-radius: 8px; border: 1.5px solid #e2e0e8; border-top: 3.5px solid var(--red);">
+                        <h3 style="margin-bottom: 0.3em;">1. Create a real European ARPA</h3>
+                        <p>(not just rebrand the EIC)</p>
+                        <ul style="padding-left: 1em; margin: 0;">
+                            <li>10% of FP10 budget (&euro;17.5B) for genuinely independent research agencies</li>
+                            <li>Autonomous programme managers with multi-year budgets</li>
+                            <li>Accept 90% failure rates to get 10x breakthroughs</li>
+                            <li>Model: UK's ARIA (already operational), Germany's SPRIND</li>
+                        </ul>
+                    </div>
+                    <div style="flex: 1; background: white; padding: 0.8em; border-radius: 8px; border: 1.5px solid #e2e0e8; border-top: 3.5px solid var(--blue);">
+                        <h3 style="margin-bottom: 0.3em;">2. Build an EU Meta-Science Unit</h3>
+                        <p>(currently doesn't exist)</p>
+                        <ul style="padding-left: 1em; margin: 0;">
+                            <li>Test and compare different funding mechanisms</li>
+                            <li>Import proven innovations: lotteries, distributed peer review, golden tickets</li>
+                            <li>Make Europe the lab for research funding reform</li>
+                        </ul>
+                    </div>
+                    <div style="flex: 1; background: white; padding: 0.8em; border-radius: 8px; border: 1.5px solid #e2e0e8; border-top: 3.5px solid var(--green-dark);">
+                        <h3 style="margin-bottom: 0.3em;">3. Use AI to transform grant administration</h3>
+                        <ul style="padding-left: 1em; margin: 0;">
+                            <li>Reduce bureaucratic burden that currently drowns applicants</li>
+                            <li>Follow NSF's lead in building internal AI platforms</li>
+                            <li>Free up researcher time for actual research</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 17: The Window Is Now -->
+            <section>
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="header-line-short"></div>
+                        <div class="header-brand"><strong>c.f.g</strong> <em></em></div>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-line-long"></div>
+                        <div class="header-number"></div>
+                    </div>
+                </div>
+                <h2>The Window Is Now</h2>
+                <div style="font-size: 0.7em; max-width: 900px;">
+                    <p><strong>Timing matters:</strong> FP10 negotiations run through 2027. Decisions made in the next 18 months will shape European science for 2028&ndash;2034.</p>
+                    <p><strong>Political alignment exists:</strong> Multiple presidencies (Lithuania, Greece) explicitly support &ldquo;tolerance for failure&rdquo; and &ldquo;risk-taking culture&rdquo;&mdash;the language matches these reforms.</p>
+                    <div class="key-insight" style="margin-top: 0.6em;">
+                        <strong>The alternative:</strong> Continue spending &euro;100B+ annually with incrementally better results, whilst the US and China pull further ahead.
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 18: What You Can Do -->
+            <section>
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="header-line-short"></div>
+                        <div class="header-brand"><strong>c.f.g</strong> <em></em></div>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-line-long"></div>
+                        <div class="header-number"></div>
+                    </div>
+                </div>
+                <h2>What You Can Do</h2>
+                <div style="font-size: 0.65em; max-width: 900px; margin-top: 0.3em;">
+                    <ul style="padding-left: 1.2em; line-height: 1.7;">
+                        <li><strong>If you're in the Commission:</strong> Champion meta-science experiments in remaining Horizon Europe budget</li>
+                        <li><strong>If you're in Parliament:</strong> Push for protected budget lines for high-risk research in FP10 amendments</li>
+                        <li><strong>If you're in civil society:</strong> Connect us to the right people&mdash;this reform needs champions across institutions</li>
+                        <li><strong>If you're interested:</strong> CFG's Technology and State Capacity incubator is coordinating stakeholder engagement on FP10 meta-science reforms</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- SLIDE 19: Discussion -->
+            <section class="center-slide section-break" data-background-image="images/section-break-background.png" data-background-size="cover" data-background-position="center">
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="header-line-short"></div>
+                        <div class="header-brand"><strong>c.f.g</strong> <em></em></div>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-line-long"></div>
+                        <div class="header-number"></div>
+                    </div>
+                </div>
+                <h1 class="section-title">Discussion</h1>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <script>
+        // Initialize Mermaid
+        mermaid.initialize({
+            startOnLoad: false,
+            theme: 'base',
+            securityLevel: 'loose',
+            themeVariables: {
+                darkMode: false,
+                background: '#ffffff',
+                primaryColor: '#8098FF',
+                primaryTextColor: '#0E0705',
+                primaryBorderColor: '#4a6ed4',
+                lineColor: '#0E0705',
+                secondaryColor: '#B4DBA2',
+                tertiaryColor: '#A09AC8'
+            },
+            flowchart: {
+                useMaxWidth: false,
+                htmlLabels: true,
+                curve: 'basis',
+                padding: 25,
+                nodeSpacing: 60,
+                rankSpacing: 60
+            }
+        });
+
+        // Initialize Reveal.js
+        Reveal.initialize({
+            hash: true,
+            controls: true,
+            progress: true,
+            center: false,
+            transition: 'slide',
+            width: 1280,
+            height: 720,
+            margin: 0.04,
+            slideNumber: false
+        });
+
+        // Render Mermaid diagrams
+        async function renderMermaid() {
+            const mermaidDivs = document.querySelectorAll('.mermaid');
+            for (let i = 0; i < mermaidDivs.length; i++) {
+                const div = mermaidDivs[i];
+                const graphDefinition = div.textContent;
+                const { svg } = await mermaid.render(`mermaid-${i}`, graphDefinition);
+                div.innerHTML = svg;
+            }
+        }
+
+        // Render after Reveal is ready
+        Reveal.on('ready', renderMermaid);
+
+        // Auto-number slides: fills every .header-number with its 1-based slide index
+        Reveal.on('ready', () => {
+            document.querySelectorAll('.slides > section').forEach((section, i) => {
+                const num = section.querySelector('.header-number');
+                if (num) num.textContent = i + 1;
+            });
+        });
+
+        // ── METR Horizon Chart (generated from data/metr-horizon-v1.1.json) ──
+        (async function buildMetrChart() {
+            const container = document.getElementById('metr-chart');
+            if (!container) return;
+
+            // Embedded chart data (extracted from data/metr-horizon-v1.1.json)
+            // Only the fields the chart needs: doubling_time, release_date, p50_horizon_length, is_sota
+            const METR_DATA = {
+                doubling_time_in_days: { from_2023_on: { ci_high: 155.27, ci_low: 105.213, point_estimate: 128.12 } },
+                results: {
+                    claude_3_5_sonnet_20240620_inspect: { release_date: "2024-06-20", metrics: { is_sota: true, p50_horizon_length: { ci_high: 20.892402, ci_low: 4.726563, estimate: 10.771603 } } },
+                    claude_3_5_sonnet_20241022_inspect: { release_date: "2024-10-22", metrics: { is_sota: true, p50_horizon_length: { ci_high: 40.167901, ci_low: 9.669489, estimate: 19.776241 } } },
+                    claude_3_7_sonnet_inspect: { release_date: "2025-02-24", metrics: { is_sota: true, p50_horizon_length: { ci_high: 103.15522, ci_low: 32.488674, estimate: 59.763762 } } },
+                    claude_3_opus_inspect: { release_date: "2024-03-04", metrics: { is_sota: false, p50_horizon_length: { ci_high: 7.636566, ci_low: 1.41216, estimate: 3.575399 } } },
+                    claude_4_1_opus_inspect: { release_date: "2025-08-05", metrics: { is_sota: false, p50_horizon_length: { ci_high: 161.074728, ci_low: 59.798077, estimate: 100.84381 } } },
+                    claude_4_opus_inspect: { release_date: "2025-05-22", metrics: { is_sota: false, p50_horizon_length: { ci_high: 172.289314, ci_low: 59.494607, estimate: 101.182643 } } },
+                    claude_opus_4_5_inspect: { release_date: "2025-11-24", metrics: { is_sota: true, p50_horizon_length: { ci_high: 734.096977, ci_low: 172.952147, estimate: 320.422486 } } },
+                    davinci_002: { release_date: "2020-05-28", metrics: { is_sota: true, p50_horizon_length: { ci_high: 0.246039, ci_low: 0.07102, estimate: 0.148793 } } },
+                    gemini_3_pro: { release_date: "2025-11-18", metrics: { is_sota: true, p50_horizon_length: { ci_high: 442.590073, ci_low: 138.748224, estimate: 236.654674 } } },
+                    gpt2: { release_date: "2019-02-14", metrics: { is_sota: true, p50_horizon_length: { ci_high: 0.130397, ci_low: 0.002019, estimate: 0.039762 } } },
+                    gpt_3_5_turbo_instruct: { release_date: "2022-03-15", metrics: { is_sota: true, p50_horizon_length: { ci_high: 0.989884, ci_low: 0.227348, estimate: 0.604245 } } },
+                    gpt_4: { release_date: "2023-03-14", metrics: { is_sota: true, p50_horizon_length: { ci_high: 6.796939, ci_low: 1.539554, estimate: 3.524514 } } },
+                    gpt_4_1106_inspect: { release_date: "2023-11-06", metrics: { is_sota: true, p50_horizon_length: { ci_high: 7.169444, ci_low: 1.591756, estimate: 3.609578 } } },
+                    gpt_4_turbo_inspect: { release_date: "2024-04-09", metrics: { is_sota: false, p50_horizon_length: { ci_high: 5.871558, ci_low: 1.519109, estimate: 3.225159 } } },
+                    gpt_4o_inspect: { release_date: "2024-05-13", metrics: { is_sota: true, p50_horizon_length: { ci_high: 12.005238, ci_low: 3.507029, estimate: 6.404471 } } },
+                    gpt_5_1_codex_max_inspect: { release_date: "2025-11-19", metrics: { is_sota: false, p50_horizon_length: { ci_high: 453.466898, ci_low: 134.519378, estimate: 236.548491 } } },
+                    gpt_5_2: { release_date: "2025-12-11", metrics: { is_sota: true, p50_horizon_length: { ci_high: 1042.54945, ci_low: 197.995955, estimate: 394.383957 } } },
+                    gpt_5_2025_08_07_inspect: { release_date: "2025-08-07", metrics: { is_sota: true, p50_horizon_length: { ci_high: 479.89444, ci_low: 117.50858, estimate: 213.954459 } } },
+                    o1_inspect: { release_date: "2024-12-05", metrics: { is_sota: true, p50_horizon_length: { ci_high: 65.751345, ci_low: 20.748909, estimate: 37.937543 } } },
+                    o1_preview: { release_date: "2024-09-12", metrics: { is_sota: true, p50_horizon_length: { ci_high: 32.760986, ci_low: 11.144477, estimate: 19.395096 } } },
+                    o3_inspect: { release_date: "2025-04-16", metrics: { is_sota: true, p50_horizon_length: { ci_high: 201.358464, ci_low: 73.152427, estimate: 120.730463 } } }
+                }
+            };
+
+            // Use embedded data (works with file:// and http://)
+            const data = METR_DATA;
+
+            // ── Model metadata: display names, company mapping ──
+            const modelMeta = {
+                gpt2:                              { name: 'GPT-2',       company: 'openai' },
+                davinci_002:                       { name: 'Davinci',     company: 'openai' },
+                gpt_3_5_turbo_instruct:            { name: 'GPT-3.5',    company: 'openai' },
+                gpt_4:                             { name: 'GPT-4',       company: 'openai' },
+                gpt_4_1106_inspect:                { name: 'GPT-4 Turbo', company: 'openai' },
+                gpt_4_turbo_inspect:               { name: 'GPT-4T',     company: 'openai' },
+                gpt_4o_inspect:                    { name: 'GPT-4o',      company: 'openai' },
+                o1_preview:                        { name: 'o1-preview',  company: 'openai' },
+                o1_inspect:                        { name: 'o1',          company: 'openai' },
+                o3_inspect:                        { name: 'o3',          company: 'openai' },
+                gpt_5_2025_08_07_inspect:          { name: 'GPT-5',      company: 'openai' },
+                gpt_5_1_codex_max_inspect:         { name: 'GPT-5.1',    company: 'openai' },
+                gpt_5_2:                           { name: 'GPT-5.2',    company: 'openai' },
+                claude_3_opus_inspect:             { name: 'Claude 3 Opus', company: 'anthropic' },
+                claude_3_5_sonnet_20240620_inspect:{ name: 'Claude 3.5',   company: 'anthropic' },
+                claude_3_5_sonnet_20241022_inspect:{ name: 'Claude 3.5v2', company: 'anthropic' },
+                claude_3_7_sonnet_inspect:         { name: 'Claude 3.7',   company: 'anthropic' },
+                claude_4_opus_inspect:             { name: 'Claude 4',     company: 'anthropic' },
+                claude_4_1_opus_inspect:           { name: 'Claude 4.1',   company: 'anthropic' },
+                claude_opus_4_5_inspect:           { name: 'Opus 4.5',     company: 'anthropic' },
+                gemini_3_pro:                      { name: 'Gemini 3',     company: 'google' }
+            };
+
+            const companyColors = {
+                openai:    { dot: '#8098FF', text: '#4a6ed4' },   // --blue, --blue-dark
+                anthropic: { dot: '#F47D5B', text: '#c45a3d' },   // --red, --red-dark
+                google:    { dot: '#7cb668', text: '#5a9a4a' }    // --green-dark, --green-darker
+            };
+            const nonSotaColor = { dot: '#c4c0cc', text: '#94929e' };
+
+            // ── Parse and sort models ──
+            const models = Object.entries(data.results).map(([key, val]) => {
+                const m = val.metrics.p50_horizon_length;
+                const dateStr = String(val.release_date);
+                return {
+                    key,
+                    date: new Date(dateStr),
+                    timestamp: new Date(dateStr).getTime(),
+                    estimate: m.estimate,       // hours
+                    ciLow: m.ci_low,
+                    ciHigh: m.ci_high,
+                    isSota: val.metrics.is_sota,
+                    meta: modelMeta[key] || { name: key, company: 'unknown' }
+                };
+            }).sort((a, b) => a.timestamp - b.timestamp);
+
+            // ── Chart layout constants (SVG viewBox coords) ──
+            const W = 960, H = 480;
+            const pad = { top: 30, right: 40, bottom: 60, left: 110 };
+            const chartW = W - pad.left - pad.right;
+            const chartH = H - pad.top - pad.bottom;
+
+            // ── X-axis: date → pixel (linear time) ──
+            const dateMin = new Date('2019-01-01').getTime();
+            const dateMax = new Date('2026-03-01').getTime();
+            const xScale = (ts) => pad.left + ((ts - dateMin) / (dateMax - dateMin)) * chartW;
+
+            // ── Y-axis: hours → pixel (linear, 0 at bottom, max at top) ──
+            // Cap at 500h (~3 weeks) to keep point estimates visible;
+            // CI bars that exceed this are clamped to chart edge
+            const yMaxHours = 500;
+            const yScale = (hours) => pad.top + chartH - (hours / yMaxHours) * chartH;
+
+            // ── Fixed gridlines with human-readable labels ──
+            const gridValues = [
+                { h: 0,   label: '0' },
+                { h: 24,  label: '1 day' },
+                { h: 72,  label: '3 days' },
+                { h: 168, label: '1 wk' },
+                { h: 336, label: '2 wks' },
+                { h: 500, label: '3 wks' }
+            ];
+
+            // ── X-axis year ticks ──
+            const yearTicks = [2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026];
+
+            // ── Trend line: exponential fit using doubling time ──
+            // From the data: doubling time ~128 days from 2023 onward
+            // We'll fit: horizon(t) = A * 2^((t - t0) / doublingDays)
+            // Anchor on GPT-4 (2023-03-14, 3.52h) as a reasonable SOTA reference
+            const doublingDays = data.doubling_time_in_days.from_2023_on.point_estimate;
+            const doublingMs = doublingDays * 86400000;
+            const anchorDate = new Date('2023-03-14').getTime();
+            const anchorHorizon = 3.52;
+            const trendFn = (ts) => anchorHorizon * Math.pow(2, (ts - anchorDate) / doublingMs);
+
+            // Trend CI bounds (using ci_low and ci_high doubling times)
+            const doublingLowMs  = data.doubling_time_in_days.from_2023_on.ci_low * 86400000;
+            const doublingHighMs = data.doubling_time_in_days.from_2023_on.ci_high * 86400000;
+            const trendHi = (ts) => anchorHorizon * Math.pow(2, (ts - anchorDate) / doublingLowMs);   // faster doubling → higher
+            const trendLo = (ts) => anchorHorizon * Math.pow(2, (ts - anchorDate) / doublingHighMs);  // slower doubling → lower
+
+            // ── Build SVG ──
+            const ns = 'http://www.w3.org/2000/svg';
+            const svg = document.createElementNS(ns, 'svg');
+            svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+            svg.setAttribute('xmlns', ns);
+            svg.style.cssText = 'width:100%;max-width:960px;height:auto;display:block;margin:0 auto;';
+
+            function el(tag, attrs, text) {
+                const e = document.createElementNS(ns, tag);
+                for (const [k, v] of Object.entries(attrs || {})) e.setAttribute(k, v);
+                if (text !== undefined) e.textContent = text;
+                return e;
+            }
+
+            // Chart background
+            svg.appendChild(el('rect', {
+                x: pad.left, y: pad.top, width: chartW, height: chartH,
+                fill: 'white', rx: 6, stroke: '#e2e0e8', 'stroke-width': 1
+            }));
+
+            // Y gridlines and labels
+            gridValues.forEach(({ h, label }) => {
+                const y = yScale(h);
+                svg.appendChild(el('line', {
+                    x1: pad.left, y1: y, x2: W - pad.right, y2: y,
+                    stroke: '#e8e8ec', 'stroke-width': 0.7
+                }));
+                svg.appendChild(el('text', {
+                    x: pad.left - 8, y: y + 5, 'text-anchor': 'end',
+                    'font-size': 14, fill: '#475569',
+                    'font-family': 'Plus Jakarta Sans, sans-serif'
+                }, label));
+            });
+
+            // Y-axis title
+            const yTitle = el('text', {
+                x: 18, y: pad.top + chartH / 2, 'text-anchor': 'middle',
+                'font-size': 15, fill: '#0E0705',
+                'font-family': 'Plus Jakarta Sans, sans-serif', 'font-weight': 500,
+                transform: `rotate(-90, 18, ${pad.top + chartH / 2})`
+            }, 'Task time horizon (50% success)');
+            svg.appendChild(yTitle);
+
+            // X-axis year labels
+            yearTicks.forEach(year => {
+                const ts = new Date(`${year}-01-01`).getTime();
+                const x = xScale(ts);
+                if (x >= pad.left && x <= W - pad.right) {
+                    svg.appendChild(el('text', {
+                        x, y: H - pad.bottom + 30, 'text-anchor': 'middle',
+                        'font-size': 14, fill: '#475569',
+                        'font-family': 'Plus Jakarta Sans, sans-serif'
+                    }, String(year)));
+                    // Tick mark
+                    svg.appendChild(el('line', {
+                        x1: x, y1: pad.top + chartH, x2: x, y2: pad.top + chartH + 5,
+                        stroke: '#475569', 'stroke-width': 1
+                    }));
+                }
+            });
+
+            // ── Trend band (confidence interval fill) ──
+            const trendSteps = 50;
+            const bandPoints = [];
+            // Forward pass (upper bound)
+            for (let i = 0; i <= trendSteps; i++) {
+                const ts = dateMin + (i / trendSteps) * (dateMax - dateMin);
+                const val = Math.min(trendHi(ts), yMaxHours);
+                bandPoints.push(`${xScale(ts).toFixed(1)},${yScale(Math.max(0, val)).toFixed(1)}`);
+            }
+            // Reverse pass (lower bound)
+            for (let i = trendSteps; i >= 0; i--) {
+                const ts = dateMin + (i / trendSteps) * (dateMax - dateMin);
+                const val = Math.max(trendLo(ts), 0);
+                bandPoints.push(`${xScale(ts).toFixed(1)},${yScale(val).toFixed(1)}`);
+            }
+            svg.appendChild(el('polygon', {
+                points: bandPoints.join(' '),
+                fill: '#A09AC8', opacity: 0.15
+            }));
+
+            // ── Trend line (dashed) ──
+            const trendLinePoints = [];
+            for (let i = 0; i <= trendSteps; i++) {
+                const ts = dateMin + (i / trendSteps) * (dateMax - dateMin);
+                const val = Math.min(trendFn(ts), yMaxHours);
+                trendLinePoints.push(`${xScale(ts).toFixed(1)},${yScale(Math.max(0, val)).toFixed(1)}`);
+            }
+            svg.appendChild(el('polyline', {
+                points: trendLinePoints.join(' '),
+                fill: 'none', stroke: '#A09AC8', 'stroke-width': 2.5,
+                'stroke-dasharray': '8,4', opacity: 0.7
+            }));
+
+            // ── Error bars and data points ──
+            // Decide which SOTA models get labels (to avoid clutter, label key milestones)
+            const labelSet = new Set([
+                'gpt2', 'davinci_002', 'gpt_3_5_turbo_instruct', 'gpt_4',
+                'o1_preview', 'claude_3_7_sonnet_inspect',
+                'o3_inspect', 'gpt_5_2025_08_07_inspect', 'gemini_3_pro',
+                'claude_opus_4_5_inspect', 'gpt_5_2'
+            ]);
+
+            models.forEach(m => {
+                const x = xScale(m.timestamp);
+                const y = yScale(m.estimate);
+                const yLo = yScale(m.ciLow);
+                const yHi = yScale(m.ciHigh);
+                const colors = m.isSota
+                    ? (companyColors[m.meta.company] || { dot: '#c4c0cc', text: '#475569' })
+                    : nonSotaColor;
+
+                // Clamp error bar to chart bounds
+                const yHiClamped = Math.max(yHi, pad.top);
+                const yLoClamped = Math.min(yLo, pad.top + chartH);
+
+                // Error bar (vertical line)
+                svg.appendChild(el('line', {
+                    x1: x, y1: yHiClamped, x2: x, y2: yLoClamped,
+                    stroke: colors.dot, 'stroke-width': 2, opacity: m.isSota ? 0.5 : 0.3
+                }));
+                // Error bar caps
+                const capW = 4;
+                svg.appendChild(el('line', {
+                    x1: x - capW, y1: yHiClamped, x2: x + capW, y2: yHiClamped,
+                    stroke: colors.dot, 'stroke-width': 2, opacity: m.isSota ? 0.5 : 0.3
+                }));
+                svg.appendChild(el('line', {
+                    x1: x - capW, y1: yLoClamped, x2: x + capW, y2: yLoClamped,
+                    stroke: colors.dot, 'stroke-width': 2, opacity: m.isSota ? 0.5 : 0.3
+                }));
+
+                // Data point circle
+                const r = m.isSota ? 6 : 5;
+                svg.appendChild(el('circle', {
+                    cx: x, cy: y, r,
+                    fill: colors.dot, stroke: 'white', 'stroke-width': 1.5,
+                    opacity: m.isSota ? 1 : 0.7
+                }));
+
+                // Label (only for selected SOTA models)
+                if (m.isSota && labelSet.has(m.key)) {
+                    // Default: label to the right and slightly above
+                    let lx = x + 10, ly = y - 6;
+                    let anchor = 'start';
+
+                    // Adjustments for specific models to avoid overlaps
+                    if (m.key === 'gpt2')                    { lx = x + 10; ly = y - 2; }
+                    if (m.key === 'davinci_002')              { lx = x + 10; ly = y - 2; }
+                    if (m.key === 'gpt_3_5_turbo_instruct')   { lx = x + 10; ly = y - 2; }
+                    if (m.key === 'gpt_4')                    { lx = x + 10; ly = y - 2; }
+                    if (m.key === 'o1_preview')               { lx = x - 10; ly = y - 8; anchor = 'end'; }
+                    if (m.key === 'claude_3_7_sonnet_inspect') { lx = x + 10; }
+                    if (m.key === 'o3_inspect')               { lx = x - 10; ly = y - 4; anchor = 'end'; }
+                    if (m.key === 'gpt_5_2025_08_07_inspect') { lx = x - 10; ly = y - 10; anchor = 'end'; }
+                    if (m.key === 'gemini_3_pro')             { lx = x - 10; ly = y - 10; anchor = 'end'; }
+                    if (m.key === 'claude_opus_4_5_inspect')  { lx = x + 10; ly = y + 4; }
+                    if (m.key === 'gpt_5_2')                  { lx = x + 10; ly = y - 10; }
+
+                    svg.appendChild(el('text', {
+                        x: lx, y: ly, 'text-anchor': anchor,
+                        'font-size': 12, fill: colors.text, 'font-weight': 600,
+                        'font-family': 'Plus Jakarta Sans, sans-serif'
+                    }, m.meta.name));
+                }
+            });
+
+            // ── Axes ──
+            svg.appendChild(el('line', {
+                x1: pad.left, y1: pad.top, x2: pad.left, y2: pad.top + chartH,
+                stroke: '#0E0705', 'stroke-width': 1.5
+            }));
+            svg.appendChild(el('line', {
+                x1: pad.left, y1: pad.top + chartH, x2: W - pad.right, y2: pad.top + chartH,
+                stroke: '#0E0705', 'stroke-width': 1.5
+            }));
+
+            // ── Legend ──
+            const legY = pad.top + 8;
+            const legX = pad.left + 20;
+            svg.appendChild(el('rect', {
+                x: legX, y: legY, width: 420, height: 50,
+                rx: 6, fill: 'white', stroke: '#e2e0e8', 'stroke-width': 1, opacity: 0.95
+            }));
+            // OpenAI
+            svg.appendChild(el('circle', { cx: legX + 16, cy: legY + 16, r: 5, fill: '#8098FF' }));
+            svg.appendChild(el('text', { x: legX + 27, y: legY + 20, 'font-size': 13, fill: '#0E0705', 'font-family': 'Plus Jakarta Sans, sans-serif' }, 'OpenAI'));
+            // Anthropic
+            svg.appendChild(el('circle', { cx: legX + 90, cy: legY + 16, r: 5, fill: '#F47D5B' }));
+            svg.appendChild(el('text', { x: legX + 101, y: legY + 20, 'font-size': 13, fill: '#0E0705', 'font-family': 'Plus Jakarta Sans, sans-serif' }, 'Anthropic'));
+            // Google
+            svg.appendChild(el('circle', { cx: legX + 185, cy: legY + 16, r: 5, fill: '#7cb668' }));
+            svg.appendChild(el('text', { x: legX + 196, y: legY + 20, 'font-size': 13, fill: '#0E0705', 'font-family': 'Plus Jakarta Sans, sans-serif' }, 'Google'));
+            // Non-frontier
+            svg.appendChild(el('circle', { cx: legX + 255, cy: legY + 16, r: 5, fill: '#c4c0cc' }));
+            svg.appendChild(el('text', { x: legX + 266, y: legY + 20, 'font-size': 13, fill: '#475569', 'font-family': 'Plus Jakarta Sans, sans-serif' }, 'Non-frontier'));
+            // Error bar legend
+            svg.appendChild(el('line', { x1: legX + 10, y1: legY + 38, x2: legX + 10, y2: legY + 42, stroke: '#8098FF', 'stroke-width': 2 }));
+            svg.appendChild(el('line', { x1: legX + 5, y1: legY + 38, x2: legX + 15, y2: legY + 38, stroke: '#8098FF', 'stroke-width': 2 }));
+            svg.appendChild(el('line', { x1: legX + 5, y1: legY + 42, x2: legX + 15, y2: legY + 42, stroke: '#8098FF', 'stroke-width': 2 }));
+            svg.appendChild(el('text', { x: legX + 22, y: legY + 44, 'font-size': 12, fill: '#475569', 'font-family': 'Plus Jakarta Sans, sans-serif' }, '95% CI'));
+            // Trend line legend
+            svg.appendChild(el('line', { x1: legX + 78, y1: legY + 40, x2: legX + 110, y2: legY + 40, stroke: '#A09AC8', 'stroke-width': 2.5, 'stroke-dasharray': '6,3' }));
+            svg.appendChild(el('text', { x: legX + 117, y: legY + 44, 'font-size': 12, fill: '#475569', 'font-family': 'Plus Jakarta Sans, sans-serif' }, 'Doubling ~every 4 months'));
+
+            container.appendChild(svg);
+        })();
+    </script>
+</body>
+</html>
