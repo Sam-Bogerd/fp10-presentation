@@ -28,3 +28,7 @@ fonts/
 
 # Data
 data/
+
+# Local docs/presentation files
+CLAUDE.md
+Sample Presentation.html

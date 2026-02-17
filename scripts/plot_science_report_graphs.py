@@ -5,6 +5,8 @@ import matplotlib.font_manager as fm
 import matplotlib.pyplot as plt
 import pandas as pd
 
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+
 
 COLORS = {
     "blue": "#8098FF",
@@ -47,9 +49,9 @@ SOURCE_SIZE = 10
 
 def pick_fonts():
     local_font_dirs = [
-        Path("fonts/plus-jakarta-sans"),
-        Path("fonts/playfair-display"),
-        Path("fonts"),
+        PROJECT_ROOT / "fonts/plus-jakarta-sans",
+        PROJECT_ROOT / "fonts/playfair-display",
+        PROJECT_ROOT / "fonts",
     ]
     for local_font_dir in local_font_dirs:
         if not local_font_dir.exists():
@@ -236,8 +238,8 @@ def plot_grouped_bars(g, unit, title_font):
 
 
 def main():
-    csv_path = Path("data/Science_Report_Data.csv")
-    out_dir = Path("graphs/science_report")
+    csv_path = PROJECT_ROOT / "data/Science_Report_Data.csv"
+    out_dir = PROJECT_ROOT / "graphs/science_report"
     out_dir.mkdir(parents=True, exist_ok=True)
 
     body_font, title_font = pick_fonts()

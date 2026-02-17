@@ -5,9 +5,12 @@ import matplotlib.dates as mdates
 import matplotlib.ticker as mticker
 import matplotlib.font_manager as fm
 from datetime import datetime, timedelta
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
 # ── Load data ──
-with open("data/metr-horizon-v1.1.json") as f:
+with open(PROJECT_ROOT / "data/metr-horizon-v1.1.json") as f:
     data = json.load(f)
 
 doubling_days = data["doubling_time_in_days"]["from_2023_on"]["point_estimate"]  # ~128 days
@@ -257,5 +260,6 @@ legend = ax.legend(
 )
 
 plt.tight_layout()
-plt.savefig("metr_horizon_chart.png", dpi=200, transparent=True)
-print("Saved to metr_horizon_chart.png")
+out_path = PROJECT_ROOT / "metr_horizon_chart.png"
+plt.savefig(out_path, dpi=200, transparent=True)
+print(f"Saved to {out_path}")

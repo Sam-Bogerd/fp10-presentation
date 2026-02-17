@@ -5,6 +5,8 @@ import matplotlib.font_manager as fm
 import matplotlib.pyplot as plt
 import pandas as pd
 
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+
 
 COLORS = {
     "blue": "#8098FF",
@@ -29,9 +31,9 @@ LEGEND_SIZE = 11
 
 def pick_fonts():
     local_font_dirs = [
-        Path("fonts/plus-jakarta-sans"),
-        Path("fonts/playfair-display"),
-        Path("fonts"),
+        PROJECT_ROOT / "fonts/plus-jakarta-sans",
+        PROJECT_ROOT / "fonts/playfair-display",
+        PROJECT_ROOT / "fonts",
     ]
     for local_font_dir in local_font_dirs:
         if not local_font_dir.exists():
@@ -158,8 +160,8 @@ def plot_us_breakdown(df, out_dir, title_font):
 
 
 def main():
-    source = Path("data/science_funders_overview.ods")
-    out_dir = Path("graphs/science_funders")
+    source = PROJECT_ROOT / "data/science_funders_overview.ods"
+    out_dir = PROJECT_ROOT / "graphs/science_funders"
     out_dir.mkdir(parents=True, exist_ok=True)
 
     body_font, title_font = pick_fonts()
