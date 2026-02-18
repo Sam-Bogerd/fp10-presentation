@@ -1673,5 +1673,28 @@
             container.appendChild(svg);
         })();
     </script>
+
+    <!-- Overview toggle button -->
+    <button id="overview-btn" onclick="Reveal.toggleOverview()" title="Slide overview (O)"
+        style="position:fixed; bottom:16px; left:16px; z-index:100; background:rgba(14,7,5,0.08);
+               border:none; border-radius:6px; padding:8px; cursor:pointer; opacity:0.5;
+               transition:opacity 0.2s; display:grid; grid-template-columns:repeat(3,6px);
+               gap:3px; line-height:0;"
+        onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='0.5'">
+        <span style="width:6px;height:6px;background:var(--black);border-radius:1px;display:block"></span>
+        <span style="width:6px;height:6px;background:var(--black);border-radius:1px;display:block"></span>
+        <span style="width:6px;height:6px;background:var(--black);border-radius:1px;display:block"></span>
+        <span style="width:6px;height:6px;background:var(--black);border-radius:1px;display:block"></span>
+        <span style="width:6px;height:6px;background:var(--black);border-radius:1px;display:block"></span>
+        <span style="width:6px;height:6px;background:var(--black);border-radius:1px;display:block"></span>
+        <span style="width:6px;height:6px;background:var(--black);border-radius:1px;display:block"></span>
+        <span style="width:6px;height:6px;background:var(--black);border-radius:1px;display:block"></span>
+        <span style="width:6px;height:6px;background:var(--black);border-radius:1px;display:block"></span>
+    </button>
+    <script>
+        // Hide button when in overview mode, show when leaving
+        Reveal.on('overviewshown', () => document.getElementById('overview-btn').style.display = 'none');
+        Reveal.on('overviewhidden', () => document.getElementById('overview-btn').style.display = 'grid');
+    </script>
 </body>
 </html>
