@@ -277,19 +277,6 @@ def main():
         fig.patch.set_alpha(0.0)
         ax.patch.set_alpha(0.0)
 
-        source = g["Source"].dropna().astype(str).str.strip().iloc[0] if "Source" in g.columns and not g["Source"].dropna().empty else ""
-        if source:
-            ax.text(
-                0.0,
-                -0.18,
-                f"Source: {source}",
-                transform=ax.transAxes,
-                fontsize=SOURCE_SIZE,
-                color="#475569",
-                ha="left",
-                va="top",
-            )
-
         plt.tight_layout()
         out_path = out_dir / f"{sanitize_filename(indicator)}.png"
         fig.savefig(out_path, dpi=220, transparent=True)
@@ -303,9 +290,6 @@ def main():
         fig, ax = plot_single_year_multiregion(rd, unit, title_font)
         fig.patch.set_alpha(0.0)
         ax.patch.set_alpha(0.0)
-        source = rd["Source"].dropna().astype(str).str.strip().iloc[0] if "Source" in rd.columns and not rd["Source"].dropna().empty else ""
-        if source:
-            ax.text(0.0, -0.18, f"Source: {source}", transform=ax.transAxes, fontsize=SOURCE_SIZE, color="#475569", ha="left", va="top")
         plt.tight_layout()
         out_path = out_dir / "r_d_spending_2022.png"
         fig.savefig(out_path, dpi=220, transparent=True)
